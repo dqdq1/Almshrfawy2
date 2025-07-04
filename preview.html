@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>👁️ معاينة البحث</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="navbar">👁️ معاينة البحث</div>
+  <div class="preview-wrapper">
+    <div id="paperDesc">وصف البحث غير متوفر</div>
+    <iframe id="pdfFrame" width="100%" height="500" style="margin-top:20px;"></iframe>
+    <p id="timer">الوقت المتبقي: 30 ثانية</p>
+  </div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const desc = params.get('desc');
+    const pdf = params.get('pdf');
+
+    document.getElementById('paperDesc').innerText = desc || "وصف البحث غير متوفر";
+    if (pdf) document.getElementById('pdfFrame').src = pdf;
+
+    let seconds = 30;
+    const timer = document.getElementById('timer');
+    const interval = setInterval(() => {
+      seconds--;
+      timer.innerText = `الوقت المتبقي: ${seconds} ثانية`;
+      if (seconds <= 0) clearInterval(interval);
+    }, 1000);
+  </script>
+</body>
+</html>

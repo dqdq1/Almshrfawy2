@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>📚 مكتبة البحوث</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="navbar">📚 مكتبة البحوث</div>
+
+  <section class="filter-box">
+    <button class="btn" onclick="filterPapers('الكل')">الكل</button>
+    <button class="btn" onclick="filterPapers('هندسة')">هندسة</button>
+    <button class="btn" onclick="filterPapers('علوم')">علوم</button>
+    <button class="btn" onclick="filterPapers('طب')">طب</button>
+  </section>
+
+  <div id="library" class="library-grid"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

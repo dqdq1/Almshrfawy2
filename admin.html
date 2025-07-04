@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>لوحة التحكم | رفع بحث</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="navbar">📤 لوحة رفع البحوث</div>
+  <div class="admin-panel">
+    <form id="uploadForm">
+      <input type="text" id="title" placeholder="عنوان البحث" required />
+      <textarea id="desc" placeholder="وصف مختصر للبحث" required></textarea>
+      <select id="category" required>
+        <option value="">اختر التصنيف</option>
+        <option value="هندسة">هندسة</option>
+        <option value="علوم">علوم</option>
+        <option value="طب">طب</option>
+      </select>
+      <input type="file" id="pdfFile" accept="application/pdf" required />
+      <button type="submit" class="btn">رفع البحث</button>
+    </form>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
